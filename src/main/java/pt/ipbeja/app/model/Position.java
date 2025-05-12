@@ -22,8 +22,8 @@ public record Position(int line, int col) {
 
     /**
      * Checks if line col are inside tha board
-     * @param line
-     * @param col
+     * @param line line
+     * @param col column
      * @return true if inside, false otherwise
      */
     public static boolean isInside(int line, int col) {
