@@ -6,7 +6,6 @@ import javafx.scene.image.ImageView;
 import pt.ipbeja.app.model.Position;
 
 import java.net.URL;
-import java.nio.file.Paths;
 
 
 /**
@@ -14,7 +13,7 @@ import java.nio.file.Paths;
  *
  * @author João Paulo Barros
  * @version 2025/05/12
- * images generated in https://text2image.com/en/
+ * images generated in <a href="https://text2image.com/en/">...</a>
  */
 public class PieceButton extends Button
 {
@@ -30,7 +29,7 @@ public class PieceButton extends Button
     /**
      * @return the position
      */
-    public Position position()
+    Position position()
     {
         return this.position;
     }
@@ -66,7 +65,6 @@ public class PieceButton extends Button
         } else {
             System.err.println("Cannot find resource: " + imagePath);
             this.setGraphic(null);
-            return;
         }
     }
 }
