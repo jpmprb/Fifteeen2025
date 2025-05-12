@@ -44,6 +44,7 @@ public class PieceButton extends Button
     public void setTextAndImage(String newText)
     {
         this.setText(newText);
+        this.setStyle("-fx-text-fill: transparent;"); // to hide text in button
         String imageName = newText;
         if (newText.isEmpty())
         {
@@ -57,8 +58,8 @@ public class PieceButton extends Button
         if (imageUrl != null) {
             Image image = new Image(imageUrl.toExternalForm());
             ImageView imageView = new ImageView(image);
-            imageView.setFitWidth(50);
-            imageView.setFitHeight(50);
+            //imageView.setFitWidth(50);
+            //imageView.setFitHeight(50);
             //imageView.setPreserveRatio(true);
 
             this.setGraphic(imageView);

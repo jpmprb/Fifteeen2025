@@ -112,15 +112,12 @@ public class Model {
      */
     public void mix(int minMoves, int maxMoves) {
         assert (minMoves <= maxMoves);
-        Position empty = new Position(N_LINES - 1, N_COLS - 1);
         int nMoves = minMoves + RAND.nextInt(maxMoves - minMoves + 1);
 
         for (int i = 0; i < nMoves; i++) {
-            Position pieceToMove = this.randomlySelectNeighborOf(empty);
-            Move m = new Move(pieceToMove, empty); // occupy empty space
+            Position pieceToMove = this.randomlySelectNeighborOf(emptyPosition);
+            Move m = new Move(pieceToMove, emptyPosition); // occupy empty space
             this.applyMove(m);
-            empty = pieceToMove; // moved piece position is now the empty
-            // position
             this.moves.addFirst(m); // add at head (begin) of deque
         }
     }

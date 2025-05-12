@@ -29,8 +29,8 @@ import java.util.List;
 /**
  * The fifteen main view
  *
- * @author João Paulo Barros e Rui Pais
- * @version 2014/05/19 - 2016/04/03 - 2017/04/19 - 2019/05/06 - 2021/05/18
+ * @author João Paulo Barros
+ * @version 2025/05/12
  */
 public class FifteenGUI extends Application implements View {
     private final String ICON_FILE = "/resources/images/puzzle15.jpg";
@@ -55,14 +55,13 @@ public class FifteenGUI extends Application implements View {
     public FifteenGUI() {
         this.buttons = new ArrayList<>();
         this.model = new Model(this);
+        this.mixModel();
         this.scene = this.createScene();
         this.panBtns = new GridPane();
     }
 
     @Override
     public void start(Stage stage) {
-       // this.mixModel();
-
         stage.setTitle("Fifteen Puzzle");
         this.setAppIcon(stage, ICON_FILE);
         stage.setScene(scene);
